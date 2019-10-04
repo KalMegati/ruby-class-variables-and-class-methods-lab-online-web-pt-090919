@@ -44,18 +44,14 @@ class Song
   def self.genre_count
     g_count = {}
     @@genres.uniq.each { |g| g_count[g] = 0 }
-    @@genres.each { |gen|
-      g_count.keys.each { |g| g_count[g] += 1 if gen == g }
-    }
+    @@genres.each { |gen| g_count.keys.each { |g| g_count[g] += 1 if gen == g } }
     g_count
   end
   
   def self.artist_count
     a_count = {}
     self.artists.each { |a| a_count[a] = 0 }
-    @@artists.each { |art|
-      a_count.keys.each { |a| a_count[a] += 1 if art == a }
-    }
+    @@artists.each { |art| a_count.keys.each { |a| a_count[a] += 1 if art == a } }
     a_count
   end
   
